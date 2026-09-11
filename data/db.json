@@ -1,0 +1,302 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "Legocraft Admin",
+      "email": "admin@legocraft.com",
+      "role": "admin",
+      "status": "active",
+      "salt": "369d9562d73c92c61ce55ce996b9f97e",
+      "hash": "e0ad81c0655150a771b2f71ecf7bff0aab74e99a653f38a5387eaa32119101f2da0f97987be48946e89682dae07f3fb04dc73fe37ef7fd6a53b12ff080e3ae42",
+      "createdAt": "2026-09-01T09:32:24.313Z"
+    },
+    {
+      "id": "seller-demo-1",
+      "name": "Kalaa Artisan Collective",
+      "email": "seller@legocraft.com",
+      "role": "seller",
+      "status": "active",
+      "shopName": "Kalaa Artisan Collective",
+      "salt": "0c117604e79fe6e95275f2b6b14afce5",
+      "hash": "19f37ce055e5d5b57ab8bbbc7d5382bdcf218469a60f8cbe50dbad7aa76c2323584c784cceda1041f0d0c49a840350532ce3d767fe2fa0b18526cdae2512ef0b",
+      "createdAt": "2026-09-01T09:32:24.313Z"
+    },
+    {
+      "id": "user-853030061371",
+      "name": "Berlin",
+      "email": "dayanithi98424@gmail.com",
+      "role": "seller",
+      "status": "active",
+      "shopName": "B",
+      "salt": "56d93f27a2c245ba74297773c50736fc",
+      "hash": "045d03904e071f29e0b7bea892e9651658be15728a8f20af535563548207a9519d1f5301bd22f97a7b1deef116dfae6f9c228527798a6ed04a2ee8d611591d27",
+      "createdAt": "2026-09-01T09:36:53.440Z"
+    },
+    {
+      "id": "user-06fc82793e8e",
+      "name": "santh",
+      "email": "dae@gmail.com",
+      "phone": "6381437304",
+      "role": "seller",
+      "status": "active",
+      "shopName": "kio",
+      "salt": "1df0d3cef0456ed747960e0bb9dc23f6",
+      "hash": "532bac18b203639ff0d97ad1e26a8390195277a8827089813e5b2be590cba6ee9fdd0e530049e3ffc24f5a212fb5fcf4a176d5deb795120bd7b3417529cd98e6",
+      "createdAt": "2026-09-01T10:04:27.310Z"
+    },
+    {
+      "id": "user-987bd9a279c5",
+      "name": "GOKU",
+      "email": null,
+      "phone": "1234567890",
+      "role": "seller",
+      "status": "active",
+      "shopName": "infinity innovation",
+      "salt": "ab35f045bbd117ff66811e3526599b16",
+      "hash": "7fa18200f284927177001cbf8c64c8da4c4a9ab2cc6e98057c79314b9b3d8d8e99c7facaa9540816a38b26baa498e3be8db1aa960c67ba83019b5298a8653d72",
+      "createdAt": "2026-09-01T10:38:38.621Z"
+    },
+    {
+      "id": "user-4e739cb46dd8",
+      "name": "santhosh",
+      "email": "san@gmail.com",
+      "phone": null,
+      "role": "seller",
+      "status": "active",
+      "shopName": "santlee",
+      "salt": "bb858e71f21e8416a7bfb575258b4eee",
+      "hash": "a7689dfe7f6237b00713814a3085e1214749e652d2f719ee1b0472afc2a57b7b936d0c378383c532abeaf024eb9dcd46e18d9ee64701c0ab8da839c6096fad14",
+      "createdAt": "2026-09-03T05:20:38.537Z"
+    }
+  ],
+  "sessions": {
+    "45349e67de01436703a0043353f657cd71863b933e0cc5f27d1a2f14045a0809": {
+      "userId": "admin-1",
+      "expires": 1788860042237
+    },
+    "30c24aea536527f32e7d0860431a9b334efa845ccb0303f283320bb4dd8c8b91": {
+      "userId": "seller-demo-1",
+      "expires": 1788860150268
+    },
+    "2166c2fe5258616400633b9e4b18d81da7784363ae394cd8bbc336732fd807ee": {
+      "userId": "seller-demo-1",
+      "expires": 1788935473688
+    },
+    "820dda273bec1a0aba6984c59c103b81a6ada3dc5b622afa697ceb4278ba227d": {
+      "userId": "seller-demo-1",
+      "expires": 1788937498553
+    }
+  },
+  "categories": [
+    "Wall Art",
+    "Pottery",
+    "Textiles",
+    "Home Decor",
+    "Toys",
+    "Jewelry"
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "sellerId": "seller-demo-1",
+      "image": "/uploads/img-c1f40d90c6f5.jpg",
+      "status": "active",
+      "createdAt": "2026-09-01T09:32:24.313Z",
+      "title": "Hand-Painted Madhubani Wall Art",
+      "category": "Wall Art",
+      "price": 1499,
+      "stock": 7,
+      "description": "Traditional Madhubani painting on handmade paper, framed and ready to hang. Every piece is painted by hand using natural pigments.",
+      "material": "Wood",
+      "style": "Simple",
+      "purposes": [],
+      "images": [
+        "/uploads/img-c1f40d90c6f5.jpg",
+        "/uploads/img-8f27afdf33d0.jpg"
+      ],
+      "titleHi": "हाथ से चित्रित मधुबनी वॉल आर्ट",
+      "titleTa": "கையால் வரையப்பட்ட மதுபனி சுவர் ஓவியம்",
+      "descriptionHi": "हस्तनिर्मित कागज पर पारंपरिक मधुबनी पेंटिंग, फ्रेम में तैयार और टांगने के लिए। हर टुकड़ा प्राकृतिक रंगों से हाथ से पेंट किया गया है।",
+      "descriptionTa": "கையால் செய்யப்பட்ட காகிதத்தில் பாரம்பரிய மதுபனி ஓவியம், சட்டமிடப்பட்டு தொங்கவிட தயார். ஒவ்வொரு படைப்பும் இயற்கை நிறமிகளால் கையால் வரையப்பட்டது."
+    },
+    {
+      "id": "prod-2",
+      "sellerId": "seller-demo-1",
+      "image": "/uploads/img-bedfcebd1a98.jpg",
+      "status": "active",
+      "createdAt": "2026-09-01T09:32:24.313Z",
+      "title": "Terracotta Warrior Planter",
+      "category": "Pottery",
+      "price": 649,
+      "stock": 15,
+      "description": "Hand-thrown terracotta planter fired in a wood kiln. Drainage hole included, ideal for succulents and herbs.",
+      "material": "Wood",
+      "style": "Simple",
+      "purposes": [],
+      "titleHi": "टेराकोटा वॉरियर प्लांटर",
+      "titleTa": "டெராகோட்டா வாரியர் தாவரக் கலம்",
+      "descriptionHi": "लकड़ी के भट्टे में पकाया गया हाथ से बना टेराकोटा प्लांटर। जल निकासी छेद सहित, रसीले पौधों और जड़ी-बूटियों के लिए उपयुक्त।",
+      "descriptionTa": "மர சூளையில் சுடப்பட்ட கையால் வடிவமைக்கப்பட்ட டெராகோட்டா தாவரக் கலம். வடிகால் துளையுடன், சாறுகொழுப்பு தாவரங்கள் மற்றும் மூலிகைகளுக்கு ஏற்றது."
+    },
+    {
+      "id": "prod-3",
+      "sellerId": "seller-demo-1",
+      "image": "/uploads/img-fafa6f7956e1.jpg",
+      "status": "active",
+      "createdAt": "2026-09-01T09:32:24.313Z",
+      "title": "Handwoven Pashmina Stole",
+      "category": "Textiles",
+      "price": 278,
+      "stock": 5,
+      "description": "100% pure pashmina wool, hand-woven on a traditional loom over three weeks by a single artisan family.",
+      "material": "Wood",
+      "style": "Simple",
+      "purposes": [],
+      "titleHi": "हाथ से बुना पश्मीना स्टोल",
+      "titleTa": "கையால் நெய்யப்பட்ட பஷ்மினா ஸ்டோல்",
+      "descriptionHi": "100% शुद्ध पश्मीना ऊन, एक ही शिल्पकार परिवार द्वारा तीन सप्ताह में पारंपरिक करघे पर हाथ से बुना गया।",
+      "descriptionTa": "100% தூய பஷ்மினா கம்பளி, ஒரே கலைஞர் குடும்பத்தால் மூன்று வாரங்களில் பாரம்பரிய தறியில் கையால் நெய்யப்பட்டது.",
+      "images": [
+        "/uploads/img-fafa6f7956e1.jpg"
+      ]
+    },
+    {
+      "id": "prod-4",
+      "sellerId": "seller-demo-1",
+      "image": "/uploads/img-baeb47130fe0.jpg",
+      "status": "active",
+      "createdAt": "2026-09-01T09:32:24.313Z",
+      "title": "Brass Temple Bell",
+      "category": "Home Decor",
+      "price": 899,
+      "stock": 20,
+      "description": "Cast brass bell with a hand-carved wooden handle, made using the lost-wax casting technique.",
+      "material": "Wood",
+      "style": "Simple",
+      "purposes": [],
+      "titleHi": "पीतल की मंदिर घंटी",
+      "titleTa": "பித்தளை கோவில் மணி",
+      "descriptionHi": "हाथ से तराशे गए लकड़ी के हैंडल के साथ ढली हुई पीतल की घंटी, लॉस्ट-वैक्स कास्टिंग तकनीक से बनाई गई।",
+      "descriptionTa": "இழந்த மெழுகு வார்ப்பு முறையைப் பயன்படுத்தி செய்யப்பட்ட, கையால் செதுக்கப்பட்ட மரக் கைப்பிடியுடன் கூடிய பித்தளை மணி."
+    },
+    {
+      "id": "prod-5",
+      "sellerId": "seller-demo-1",
+      "image": "/uploads/img-4620fbcd434a.jpg",
+      "status": "active",
+      "createdAt": "2026-09-01T09:32:24.313Z",
+      "title": "Channapatna Wooden Toy Set",
+      "category": "Toys",
+      "price": 799,
+      "stock": 30,
+      "description": "Lacquered wooden toy set, lead-free and child-safe, from the Channapatna toy-making cluster.",
+      "material": "Wood",
+      "style": "Simple",
+      "purposes": [],
+      "titleHi": "चन्नापटना लकड़ी के खिलौनों का सेट",
+      "descriptionHi": "चन्नापटना खिलौना समूह से लाख से रंगा हुआ लकड़ी का खिलौना सेट, सीसा-मुक्त और बच्चों के लिए सुरक्षित।",
+      "images": [
+        "/uploads/img-4620fbcd434a.jpg"
+      ],
+      "titleTa": "சன்னபட்டண மர பொம்மை தொகுப்பு",
+      "descriptionTa": "சன்னபட்டண பொம்மை தயாரிப்பு பகுதியிலிருந்து வந்த, லேக்கர் பூசப்பட்ட, ஈயம் இல்லாத, குழந்தைகளுக்குப் பாதுகாப்பான மர பொம்மை தொகுப்பு."
+    },
+    {
+      "id": "prod-6",
+      "sellerId": "seller-demo-1",
+      "image": "/uploads/img-284d8156c428.jpg",
+      "status": "active",
+      "createdAt": "2026-09-01T09:32:24.313Z",
+      "title": "Block-Printed Cotton Bedsheet",
+      "category": "Textiles",
+      "price": 4199,
+      "stock": 12,
+      "description": "Hand block-printed with natural dyes on breathable cotton, king size with two pillow covers.",
+      "material": "Wood",
+      "style": "Simple",
+      "purposes": [],
+      "titleHi": "ब्लॉक-प्रिंटेड कॉटन बेडशीट",
+      "titleTa": "பிளாக் பிரிண்ட் பருத்தி படுக்கை விரிப்பு",
+      "descriptionHi": "सांस लेने योग्य सूती कपड़े पर प्राकृतिक रंगों से हाथ से ब्लॉक-प्रिंट, किंग साइज़ में दो तकिया कवर के साथ।",
+      "descriptionTa": "மூச்சுவிடக்கூடிய பருத்தி துணியில் இயற்கை சாயங்களால் கையால் பிளாக் பிரிண்ட் செய்யப்பட்டது, இரண்டு தலையணை உறைகளுடன் கிங் சைஸில்.",
+      "images": [
+        "/uploads/img-284d8156c428.jpg"
+      ]
+    },
+    {
+      "id": "prod-f70eece8ce6c",
+      "sellerId": "user-853030061371",
+      "title": "POT",
+      "description": "H",
+      "category": "C",
+      "price": 299,
+      "stock": 5,
+      "image": "/uploads/img-b718a33c7b1e.jpg",
+      "status": "removed",
+      "createdAt": "2026-09-01T09:37:34.797Z"
+    },
+    {
+      "id": "prod-af517351d5f4",
+      "sellerId": "seller-demo-1",
+      "title": "Handcrafted Floral Beaded Dangle Earrings",
+      "description": "Brighten your style with these exquisitely handcrafted flower statement earrings featuring intricate seed beadwork in vibrant yellow, lavender, and pearl tones. Finished with delicate dangling tassels and pearl accents, they bring a playful bohemian elegance to any ensemble. Lightweight and eye-catching, these artisan earrings are perfect for festivals, spring outfits, or special occasions.",
+      "category": "Jewelry",
+      "titleHi": "हाथ से बने फूलों और मोतियों वाले लटकने वाले इयररिंग्स",
+      "descriptionHi": "चमकीले पीले, लैवेंडर और पर्ल जैसे रंगों में बारीक सीड-बीड वर्क वाले, हाथ से बने इन शानदार फूलों वाले इयररिंग्स से अपने स्टाइल को और आकर्षक बनाएं। नाजुक लटकते हुए टैसल और पर्ल की सजावट के साथ बने ये इयररिंग्स किसी भी आउटफिट में एक चंचल और बोहेमियन खूबसूरती जोड़ते हैं। हल्के और आकर्षक, ये कारीगरों द्वारा बनाए गए इयररिंग्स त्योहारों, वसंत के कपड़ों या खास मौकों के लिए एकदम सही हैं।",
+      "price": 1000,
+      "stock": 499,
+      "material": "Metal",
+      "style": "Simple",
+      "purposes": [
+        "Gift",
+        "Personal Use"
+      ],
+      "images": [
+        "/uploads/img-a8fc77702e00.jpg"
+      ],
+      "image": "/uploads/img-a8fc77702e00.jpg",
+      "status": "active",
+      "createdAt": "2026-09-02T08:45:12.004Z",
+      "titleTa": "கையால் செய்யப்பட்ட, பூ வடிவ மணிகள் கொண்ட தொங்கும் காதணிகள்",
+      "descriptionTa": "துடிப்பான மஞ்சள், லாவெண்டர் மற்றும் முத்து நிறங்களில், நுணுக்கமான சிறுமணி வேலைப்பாடுகளைக் கொண்ட, நேர்த்தியாகக் கைவினை செய்யப்பட்ட இந்த மலர் வடிவக் காதணிகளால் உங்கள் பாணியை மெருகேற்றுங்கள். மென்மையான தொங்கும் குஞ்சங்கள் மற்றும் முத்து அலங்காரங்களுடன் முடிக்கப்பட்ட இவை, எந்தவொரு ஆடைக்கும் ஒரு குதூகலமான போஹேமியன் நேர்த்தியைக் கொண்டு வருகின்றன. எடை குறைவான மற்றும் கண்ணைக் கவரும் இந்தக் கைவினைக் காதணிகள், பண்டிகைகள், வசந்த கால ஆடைகள் அல்லது சிறப்பு நிகழ்வுகளுக்கு மிகவும் பொருத்தமானவை."
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-0eabb7759353",
+      "buyerId": "seller-demo-1",
+      "buyerName": "Kalaa Artisan Collective",
+      "items": [
+        {
+          "productId": "prod-af517351d5f4",
+          "title": "Handcrafted Floral Beaded Dangle Earrings",
+          "price": 1000,
+          "qty": 1,
+          "sellerId": "seller-demo-1",
+          "status": "delivered"
+        }
+      ],
+      "total": 1000,
+      "address": "123,chennai",
+      "createdAt": "2026-09-02T08:46:40.905Z"
+    },
+    {
+      "id": "order-06bd15821fca",
+      "buyerId": "user-4e739cb46dd8",
+      "buyerName": "santhosh",
+      "items": [
+        {
+          "productId": "prod-1",
+          "title": "Hand-Painted Madhubani Wall Art",
+          "price": 1499,
+          "qty": 1,
+          "sellerId": "seller-demo-1",
+          "status": "delivered"
+        }
+      ],
+      "total": 1499,
+      "address": "t",
+      "createdAt": "2026-09-03T05:23:39.469Z"
+    }
+  ]
+}

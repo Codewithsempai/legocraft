@@ -1,0 +1,19 @@
+{
+  "name": "legocraft-marketplace",
+  "version": "1.0.0",
+  "description": "Legocraft - a Flipkart-style marketplace for artisans with buyer, seller and admin roles",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5"
+  }
+}

@@ -1,0 +1,286 @@
+<!-- ============================================================
+     ARTISAN ASSIST — Built-in Q&A Chatbot Widget
+     Paste this whole block right before your </body> tag.
+     No external libraries needed — pure HTML/CSS/JS.
+============================================================ -->
+
+<style>
+  #aa-chat-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8B5A2B, #D2691E);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    transition: transform 0.2s ease;
+  }
+  #aa-chat-toggle:hover { transform: scale(1.08); }
+
+  #aa-chat-window {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    width: 340px;
+    max-width: 90vw;
+    height: 460px;
+    max-height: 75vh;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  #aa-chat-window.open { display: flex; }
+
+  #aa-chat-header {
+    background: linear-gradient(135deg, #8B5A2B, #D2691E);
+    color: #fff;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #aa-chat-header h3 { margin: 0; font-size: 16px; }
+  #aa-chat-header span { font-size: 12px; opacity: 0.85; display:block; margin-top:2px; }
+  #aa-chat-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  #aa-chat-body {
+    flex: 1;
+    padding: 14px;
+    overflow-y: auto;
+    background: #FAF6F0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .aa-msg {
+    max-width: 80%;
+    padding: 9px 13px;
+    border-radius: 14px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  .aa-msg.bot {
+    background: #EFE3D3;
+    color: #3d2b1f;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .aa-msg.user {
+    background: #D2691E;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+
+  #aa-quick-questions {
+    padding: 10px 14px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 110px;
+    overflow-y: auto;
+  }
+  .aa-quick-btn {
+    background: #fff;
+    border: 1px solid #D2691E;
+    color: #D2691E;
+    border-radius: 16px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .aa-quick-btn:hover { background: #D2691E; color: #fff; }
+
+  #aa-chat-inputbar {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 8px;
+    gap: 6px;
+    background: #fff;
+  }
+  #aa-chat-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 13px;
+    outline: none;
+  }
+  #aa-chat-send {
+    background: #D2691E;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+</style>
+
+<button id="aa-chat-toggle" title="Chat with us">💬</button>
+
+<div id="aa-chat-window">
+  <div id="aa-chat-header">
+    <div>
+      <h3>Artisan Assist</h3>
+      <span>Ask me anything about the platform</span>
+    </div>
+    <button id="aa-chat-close">✕</button>
+  </div>
+
+  <div id="aa-chat-body"></div>
+
+  <div id="aa-quick-questions"></div>
+
+  <div id="aa-chat-inputbar">
+    <input type="text" id="aa-chat-input" placeholder="Type your question..." />
+    <button id="aa-chat-send">➤</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  // ---------- 1. EDIT YOUR Q&A HERE ----------
+  const faqData = [
+    {
+      keywords: ["what", "app", "about", "platform", "purpose"],
+      question: "What is this application about?",
+      answer: "This is an AI-Driven Market Linkage and Smart Cataloging platform that helps marginalized artisans showcase their handmade products, reach buyers directly, and get AI-assisted product cataloging (titles, descriptions, categories) without needing technical or marketing skills."
+    },
+    {
+      keywords: ["artisan", "register", "sign up", "join", "seller", "vendor"],
+      question: "How can an artisan register?",
+      answer: "Artisans can sign up using the 'Register' option, provide basic details (name, craft type, location, contact), and upload photos of their products. The system then helps auto-generate catalog listings using AI."
+    },
+    {
+      keywords: ["catalog", "cataloging", "smart cataloging", "listing", "auto generate"],
+      question: "What is Smart Cataloging?",
+      answer: "Smart Cataloging uses AI to automatically generate product titles, descriptions, categories, and tags from photos and basic artisan input — reducing manual effort and making listings market-ready instantly."
+    },
+    {
+      keywords: ["market linkage", "buyer", "sell", "connect", "reach customer"],
+      question: "How does market linkage work?",
+      answer: "The platform connects artisans directly with buyers, retailers, and exporters by matching products to relevant market demand, cutting out middlemen and helping artisans get fairer prices."
+    },
+    {
+      keywords: ["ai", "artificial intelligence", "how ai used", "technology used"],
+      question: "How is AI used in this app?",
+      answer: "AI is used for image-based product recognition, automatic description generation, price suggestions based on market trends, and recommending the right buyer segments for each artisan's products."
+    },
+    {
+      keywords: ["free", "cost", "price", "charge", "fee"],
+      question: "Is the platform free to use?",
+      answer: "Yes, artisans can register and list their products for free. This is aimed at empowering marginalized and underserved artisan communities with equal market access."
+    },
+    {
+      keywords: ["language", "regional", "local language"],
+      question: "Does it support regional languages?",
+      answer: "Yes, the app is designed to support regional/local languages so artisans who aren't comfortable with English can still use the platform easily."
+    },
+    {
+      keywords: ["contact", "support", "help", "reach you", "email"],
+      question: "How do I contact support?",
+      answer: "You can reach out to our support team through the Contact Us section of this website, and we'll get back to you as soon as possible."
+    }
+  ];
+
+  const fallbackAnswer =
+    "I don't have an exact answer for that yet, but you can reach out through the Contact Us section, or try asking about registration, cataloging, market linkage, or AI features.";
+
+  // ---------- 2. WIDGET LOGIC (no need to edit below) ----------
+  const toggleBtn = document.getElementById("aa-chat-toggle");
+  const chatWindow = document.getElementById("aa-chat-window");
+  const closeBtn = document.getElementById("aa-chat-close");
+  const chatBody = document.getElementById("aa-chat-body");
+  const quickWrap = document.getElementById("aa-quick-questions");
+  const input = document.getElementById("aa-chat-input");
+  const sendBtn = document.getElementById("aa-chat-send");
+
+  function addMessage(text, sender) {
+    const div = document.createElement("div");
+    div.className = "aa-msg " + sender;
+    div.textContent = text;
+    chatBody.appendChild(div);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function findAnswer(userText) {
+    const lower = userText.toLowerCase();
+    let best = null;
+    let bestScore = 0;
+    faqData.forEach(item => {
+      let score = 0;
+      item.keywords.forEach(k => {
+        if (lower.includes(k)) score++;
+      });
+      if (score > bestScore) {
+        bestScore = score;
+        best = item;
+      }
+    });
+    return best ? best.answer : fallbackAnswer;
+  }
+
+  function handleUserMessage(text) {
+    if (!text.trim()) return;
+    addMessage(text, "user");
+    input.value = "";
+    setTimeout(() => {
+      addMessage(findAnswer(text), "bot");
+    }, 300);
+  }
+
+  function buildQuickButtons() {
+    quickWrap.innerHTML = "";
+    faqData.forEach(item => {
+      const btn = document.createElement("button");
+      btn.className = "aa-quick-btn";
+      btn.textContent = item.question;
+      btn.onclick = () => handleUserMessage(item.question);
+      quickWrap.appendChild(btn);
+    });
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    chatWindow.classList.toggle("open");
+    if (chatWindow.classList.contains("open") && chatBody.childElementCount === 0) {
+      addMessage("Hi! 👋 I'm your Artisan Assist bot. Ask me a question or tap one below.", "bot");
+      buildQuickButtons();
+    }
+  });
+
+  closeBtn.addEventListener("click", () => chatWindow.classList.remove("open"));
+
+  sendBtn.addEventListener("click", () => handleUserMessage(input.value));
+  input.addEventListener("keypress", e => {
+    if (e.key === "Enter") handleUserMessage(input.value);
+  });
+})();
+</script>
