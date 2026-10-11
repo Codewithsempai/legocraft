@@ -1,21 +1,34 @@
-MIT License
+LEGOCRAFT NON-COMMERCIAL LICENSE
 
-Copyright (c) [YEAR] [COPYRIGHT HOLDER]
+Copyright (c) 2026 [YOUR NAME OR ORGANIZATION]
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is granted to individuals to view, download, use, and modify this
+software for personal, educational, and non-commercial purposes, subject to
+the conditions below.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Conditions:
+1. You may use and modify this project for personal, educational, research, or
+   other non-commercial purposes.
+2. You may share unmodified copies of this project, provided this license and
+   the copyright notice are included.
+3. If you distribute modified copies, you must clearly identify your changes
+   and include this license and the original copyright notice.
+4. You may not sell this project, copies of it, or modified versions of it.
+5. You may not use this project or modified versions for commercial purposes,
+   including as part of a paid product or service, without prior written
+   permission from the copyright holder.
+6. You may not remove this license or misrepresent the original authorship.
+
+Third-party components, libraries, fonts, images, and other assets may be
+subject to their own licenses. This license does not override those terms.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+AUTHORS OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY ARISING FROM THE SOFTWARE OR ITS USE.
+
+For commercial permissions, contact: [YOUR CONTACT EMAIL]
+
+This is a custom license template, not a standard OSI-approved open-source
+license. Replace the bracketed placeholders before publishing.
